@@ -1,0 +1,10 @@
+val pagerState = rememberPagerState()
+
+HorizontalPager(count = 10, state = pagerState) { page ->
+    // ...page content
+}
+
+// Later, scroll to page 2
+scope.launch {
+    pagerState.scrollToPage(2)
+}
